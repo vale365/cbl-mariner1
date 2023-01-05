@@ -264,12 +264,12 @@ exit 0
 %post
 %{?ldconfig}
 %if 0%{?systemd}
-%{systemd_user_post} pulseaudio.socket
+%systemd_user_post pulseaudio.socket
 %endif
 
 %if 0%{?systemd}
 %preun
-%{systemd_user_preun} pulseaudio.socket
+%systemd_user_preun pulseaudio.socket
 %endif
 
 %ldconfig_postun

@@ -269,8 +269,8 @@ getent passwd pipewire >/dev/null || \
 exit 0
 
 %post
-%{systemd_user_post} pipewire.service
-%{systemd_user_post} pipewire.socket
+%systemd_user_post pipewire.service
+%systemd_user_post pipewire.socket
 
 %triggerun -- %{name} < 0.3.6-2
 # This is for upgrades from previous versions which had a static symlink.
@@ -279,12 +279,12 @@ exit 0
 systemctl --no-reload preset --global pipewire.socket >/dev/null 2>&1 || :
 
 %post pulseaudio
-%{systemd_user_post} pipewire-pulse.service
-%{systemd_user_post} pipewire-pulse.socket
+%systemd_user_post pipewire-pulse.service
+%systemd_user_post pipewire-pulse.socket
 
 %if %{with media_session}
 %post media-session
-%{systemd_user_post} pipewire-media-session.service
+%systemd_user_post pipewire-media-session.service
 %endif
 
 %files
