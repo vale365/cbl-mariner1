@@ -33,7 +33,7 @@ BuildRequires:  meson >= 0.59.0
 BuildRequires:  gcc
 BuildRequires:  g++
 BuildRequires:  pkgconfig
-BuildRequires:  pkgconfig(libudev)
+#BuildRequires:  pkgconfig(libudev)
 BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(glib-2.0) >= 2.32
 BuildRequires:  pkgconfig(gio-unix-2.0) >= 2.32

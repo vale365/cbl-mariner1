@@ -1,7 +1,7 @@
 %global         majorminor      1.0
 Summary:        GStreamer streaming media framework base plugins
 Name:           gstreamer1-plugins-base
-Version:        1.20.4
+Version:        1.20.0
 Release:        2%{?dist}
 License:        LGPLv2+
 Vendor:         Microsoft Corporation
@@ -9,11 +9,10 @@ Distribution:   Mariner
 URL:            https://gstreamer.freedesktop.org/
 Source0:        https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-%{version}.tar.xz
 Patch0:         0001-missing-plugins-Remove-the-mpegaudioversion-field.patch
-Patch1:         0002-remove-missing-symbol-from-libs.patch
 BuildRequires:  meson >= 0.48.0
 BuildRequires:  gcc
 BuildRequires:  gcc-c++
-BuildRequires:  gstreamer1-devel
+BuildRequires:  gstreamer1-devel >= %{version}
 BuildRequires:  gobject-introspection-devel >= 1.31.1
 BuildRequires:  iso-codes-devel
 BuildRequires:  alsa-lib-devel
@@ -152,7 +151,7 @@ find %{buildroot} -name '*.la' -exec rm -fv {} ';'
 
 %files -f gst-plugins-base-%{majorminor}.lang
 %license COPYING
-%doc AUTHORS NEWS README.md README.static-linking RELEASE REQUIREMENTS
+%doc AUTHORS NEWS README.static-linking RELEASE REQUIREMENTS
 %{_datadir}/appdata/*.appdata.xml
 %{_libdir}/libgstallocators-%{majorminor}.so.*
 %{_libdir}/libgstaudio-%{majorminor}.so.*
