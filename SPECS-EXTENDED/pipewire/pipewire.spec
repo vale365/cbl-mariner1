@@ -47,7 +47,7 @@ BuildRequires:  pkgconfig(fdk-aac)
 BuildRequires:  pkgconfig(vulkan)
 %endif
 BuildRequires:  pkgconfig(bluez)
-BuildRequires:  systemd
+#BuildRequires:  systemd
 BuildRequires:  systemd-devel
 BuildRequires:  alsa-lib-devel
 BuildRequires:  libv4l-devel
