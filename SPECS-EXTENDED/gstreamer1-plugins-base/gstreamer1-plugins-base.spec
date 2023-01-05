@@ -13,7 +13,7 @@ Patch1:         0002-remove-missing-symbol-from-libs.patch
 BuildRequires:  meson >= 0.48.0
 BuildRequires:  gcc
 BuildRequires:  gcc-c++
-BuildRequires:  gstreamer1-devel >= %{version}
+BuildRequires:  gstreamer1-devel
 BuildRequires:  gobject-introspection-devel >= 1.31.1
 BuildRequires:  iso-codes-devel
 BuildRequires:  alsa-lib-devel
