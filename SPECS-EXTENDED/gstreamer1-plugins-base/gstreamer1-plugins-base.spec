@@ -1,3 +1,4 @@
+%global debug_package %{nil}
 %global         majorminor      1.0
 Summary:        GStreamer streaming media framework base plugins
 Name:           gstreamer1-plugins-base
