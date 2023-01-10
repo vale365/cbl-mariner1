@@ -9,7 +9,7 @@ Distribution:   Mariner
 Summary: Device-mapper RAID tool and library
 Name: dmraid
 Version: 1.0.0.rc16
-Release: 45%{?dist}
+Release: 46%{?dist}
 License: GPLv2+
 URL: http://people.redhat.com/heinzm/sw/dmraid
 
@@ -76,7 +76,7 @@ with dmevent_tool.
 %package -n dmraid-events-logwatch
 Summary: dmraid logwatch-based email reporting
 Requires: dmraid-events = %{version}-%{release}, logwatch
-Requires: crontabs
+Requires: cronie
 
 %description -n dmraid-events-logwatch
 Provides device failure reporting via logwatch-based email reporting.
@@ -188,6 +188,9 @@ rm -f %{buildroot}%{_libdir}/libdmraid.a
 %ghost /var/cache/logwatch/dmeventd/syslogpattern.txt
 
 %changelog
+* Tue Jan 10 2023 Osama Esmail <osamaesmail@microsoft.com> - 1.0.0.rc16-46
+- Replacing crontabs with cronie (removing crontabs rpm because of redundancy)
+
 * Fri Oct 15 2021 Pawel Winogrodzki <pawelwi@microsoft.com> - 1.0.0.rc16-45
 - Initial CBL-Mariner import from Fedora 32 (license: MIT).
 
