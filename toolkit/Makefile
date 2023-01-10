@@ -156,7 +156,7 @@ RELEASE_VERSION    ?= $(RELEASE_MAJOR_ID)$(RELEASE_MINOR_ID)
 IMAGE_TAG          ?=
 
 # panic,fatal,error,warn,info,debug,trace
-LOG_LEVEL          ?= info
+LOG_LEVEL          ?= trace
 STOP_ON_WARNING    ?= n
 STOP_ON_PKG_FAIL   ?= n
 STOP_ON_FETCH_FAIL ?= n
