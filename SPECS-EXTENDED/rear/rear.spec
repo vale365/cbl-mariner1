@@ -154,6 +154,7 @@ echo "30 1 * * * root /usr/sbin/rear checklayout || /usr/sbin/rear mkrescue" >re
 %changelog
 * Tue Jan 10 2023 Osama Esmail <osamaesmail@microsoft.com> - 2.4-7
 - Replacing crontabs with cronie (removing crontabs rpm because of redundancy)
+- License verified
 
 * Thu Oct 14 2021 Pawel Winogrodzki <pawelwi@microsoft.com> - 2.4-6
 - Initial CBL-Mariner import from Fedora 32 (license: MIT).

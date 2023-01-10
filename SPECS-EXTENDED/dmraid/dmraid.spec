@@ -190,6 +190,7 @@ rm -f %{buildroot}%{_libdir}/libdmraid.a
 %changelog
 * Tue Jan 10 2023 Osama Esmail <osamaesmail@microsoft.com> - 1.0.0.rc16-46
 - Replacing crontabs with cronie (removing crontabs rpm because of redundancy)
+- License verified
 
 * Fri Oct 15 2021 Pawel Winogrodzki <pawelwi@microsoft.com> - 1.0.0.rc16-45
 - Initial CBL-Mariner import from Fedora 32 (license: MIT).
