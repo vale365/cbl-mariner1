@@ -2509,7 +2509,7 @@
         "other": {
           "name": "dmraid",
           "version": "1.0.0.rc16",
-          "downloadUrl": "https://people.redhat.com/heinzm/sw/dmraid/src/dmraid-1.0.0.rc16.tar.bz2"
+          "downloadUrl": "https://people.redhat.com/heinzm/sw/dmraid/src/dmraid-1.0.0.rc16-3.tar.bz2"
         }
       }
     },

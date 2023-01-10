@@ -25,7 +25,7 @@ Requires: kpartx
 Requires: systemd
 Requires(post): systemd >= 195-4
 
-Source0: https://people.redhat.com/heinzm/sw/dmraid/src/%{name}-%{version}-3.tar.bz2
+Source0: https://people.redhat.com/heinzm/sw/dmraid/src/%{name}-%{version}-3.tar.bz2#/%{name}-%{version}.tar.bz2
 Source1: fedora-dmraid-activation
 Source2: dmraid-activation.service
 
