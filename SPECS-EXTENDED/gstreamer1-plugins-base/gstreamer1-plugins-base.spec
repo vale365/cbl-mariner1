@@ -145,6 +145,15 @@ EOF
 # Clean out files that should not be part of the rpm.
 find %{buildroot} -name '*.la' -exec rm -fv {} ';'
 
+#TEMP-FIX:
+# gstreamer1 installs fileattrs to setup rpm dependency generation macros for shared libraries
+# installed under %{_libdir}/gstreamer-%{majorminor} path.
+# However, the generator script gstreamer1.prov is stuck when generating the provides list
+# thus causing the build to stuck when run in a x86_64 docker environment.
+# The plugin gst-plugin-scanner seems to be the cause, which if removed unblocks the generation of
+# provides list for the shared libraries.
+rm %{_libexecdir}/gstreamer-%{majorminor}/gst-plugin-scanner
+
 %ldconfig_scriptlets
 
 %check
