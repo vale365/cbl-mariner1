@@ -266,7 +266,7 @@ mv -fv %{buildroot}/lib/udev/rules.d/90-pipewire-alsa.rules %{buildroot}%{_libdi
 # thus causing the build to stuck when run in a x86_64 docker environment.
 # The plugin gst-plugin-scanner seems to be the cause, which if removed unblocks the generation of
 # provides list for the shared libraries.
-rm %{_libexecdir}/gstreamer-%{majorminor}/gst-plugin-scanner
+rm %{_libexecdir}/gstreamer-1.0/gst-plugin-scanner
 
 %check
 %meson_test
